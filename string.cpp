@@ -1,4 +1,3 @@
-// C++ program to demonstrate getline() function
 
 #include <iostream>
 #include <string>
@@ -9,7 +8,6 @@ class operation{
     std::string word;
     public:
     int length(std::string word);
-    void concantate();
 
 };
 int operation::length(std::string x){
@@ -17,20 +15,40 @@ int operation::length(std::string x){
     len = word.length();
     return (len);
 }
-void operation::concantate(){
-    std::cout<<"enter a word to concantate : "<<std::endl;
-    getline(std::cin,word);
-    word+=word;
-    std::cout<<"result : "<<word<<std::endl;
-}
-const std::string YES = "stop";
+class concatenator{
+    private:
+    std::string result;
+    public:
+    void concate(std::string w);
+    std::string get_result();
+};
+void concatenator::concate(std::string w){
+    result+=w;
 
+}
+std::string concatenator::get_result(){
+    return (result);
+}
+class compare{
+    private:
+    std::string word;
+    public:
+    void getword(m){
+        word=n;
+    }
+    std::string operation(){
+        word.length()
+    }
+}
+const std::string YES = "skip";
 int main(){
-    std::string name;
+    std::string name,word;
     operation s;
-    int length;
+    concatenator c;
+    int length,r;
+    std::cout<<"*************** length of string ******************"<<std::endl;
     while(true){
-        std::cout<<"enter word to get length or type 'stop' to skip : "<<std::endl;
+        std::cout<<"enter word to get length or type 'skip' to skip : "<<std::endl;
         getline(std::cin,name);
         if(name.empty()){
             std::cout<<"please enter a word to continue\n";
@@ -44,19 +62,18 @@ int main(){
 
 
         }
-    }
-    while(true){
-        int choice;
-        std::cout<<"press any number to continue or press 1 to skip concantating"<<std::endl;
-        std::cin>>choice;
-        if(choice==1){
+}
+    std::cout<<"************** concatenate ***************"<<std::endl;
+    std::cout<<"how many words to concatenate : "<<std::endl;
+    std::cin>>r;
+    for (int i=0;i<r;i++){
+        std::cout<<"enter word or exit to skip : "<<std::endl;
+        getline(std::cin,word);
+        if (word=="skip"){
             break;
         }
-        else{
-            s.concantate();
-        }
+        c.concate(word);
     }
-
-
-
+    std::cout<<"the result is : "<<c.get_result()<<std::endl;
+    std::cout<<"**************** compare ******************"<<std::endl;
 }
