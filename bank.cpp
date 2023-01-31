@@ -100,6 +100,7 @@ void menu()      //function displays menu
 }
 void customer::statement()
 {
+	std::cout<<"************* ACCOUNT STATEMENT **************"<<std::endl;
 	std::cout<<"Account name : "<<customer_name<<std::endl;
 	std::cout<<"Account number : "<<acc_no<<std::endl;
 	std::cout<<"Account type : "<<account_type<<std::endl;
@@ -137,7 +138,11 @@ int main()  //main function
 			break;
 		}
 	}
-    
+	std::string password,username;
+    std::cout<<"please provide your user name and password"<<std::endl;
+	getline(std::cin,password);
+	getline(std::cin,username);
+	std::cout<<"please create an account to continue!"<<std::endl;
 	std::cout<<"enter account name : "<<std::endl;
 	std::cin>>name;
 	std::cout<<"enter account number : "<<std::endl;
@@ -176,8 +181,10 @@ int main()  //main function
 		case 6:return 0;
 		default: std::cout<<"invalid entry try again!!"<<std::endl;
 	}
+
 	
 	}
+	std::cou<<"thank you for using our services.vist again!"<<std::endl;
     return (0);
 
 }
