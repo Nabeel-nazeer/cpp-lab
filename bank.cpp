@@ -184,7 +184,7 @@ int main()  //main function
 
 	
 	}
-	std::cou<<"thank you for using our services.vist again!"<<std::endl;
+	std::cout<<"thank you for using our services.vist again!"<<std::endl;
     return (0);
 
 }
