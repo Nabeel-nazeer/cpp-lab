@@ -33,18 +33,24 @@ class compare{
     private:
     std::string word;
     public:
-    void getword(m){
-        word=n;
+    void getword(std::string m){
+        word=m;
     }
     std::string operation(){
-        word.length()
+        std::string big,len;
+        big = word;
+        len=word.length();
+        if(len > word.length()){
+            big = word;
+        }
     }
-}
+};
 const std::string YES = "skip";
 int main(){
-    std::string name,word;
+    std::string name,word,words;
     operation s;
     concatenator c;
+    compare d;
     int length,r;
     std::cout<<"*************** length of string ******************"<<std::endl;
     while(true){
@@ -76,4 +82,14 @@ int main(){
     }
     std::cout<<"the result is : "<<c.get_result()<<std::endl;
     std::cout<<"**************** compare ******************"<<std::endl;
+    while(true){
+        std::cout<<"enter word or 'exit' to quit: "<<std::endl;
+        getline(std::cin,words);
+        if (words=="exit"){
+            break;
+        }
+        d.getword(words);
+        d.operation();
+
+        }
 }
