@@ -17,8 +17,36 @@ void student::input()
     cin>>name;
     cout<<"enter student roll no. : ";
     cin>>rollno;
-    cout<<"enter marks for three subjects : ";
-    cin>>marks[0]>>marks[1]>>marks[2];
+    while(true){
+        std::cout<<"enter marks for physics(out of 100) : "<<std::endl;
+        cin>>marks[0];
+        if (marks[0]>100){
+            std::cout<<"please enter marks out of 100 : "<<std::endl;
+            std::cin>>marks[0];
+            break;
+        }
+        break;
+    }    
+    while(true){
+        std::cout<<"enter marks for chemistry(out of 100) : "<<std::endl;
+        std::cin>>marks[1];
+        if(marks[1]>100){
+            std::cout<<"please enter marks out of 100 : "<<std::endl;
+            std::cin>>marks[1];
+            break;
+        }
+        break;
+    }
+    while(true){    
+        std::cout<<"enter marks for maths(out of 100) : "<<std::endl;
+        std::cin>>marks[2];
+        if(marks[2]>100){
+            std::cout<<"please enter marks out of 100 : "<<std::endl;
+            std::cin>>marks[2];
+            break;
+        }
+        break;
+    }
 }
 void student::calcgrade()
 {

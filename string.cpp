@@ -44,6 +44,7 @@ class compare{
             big = word;
         }
     }
+    
 };
 const std::string YES = "skip";
 int main(){
