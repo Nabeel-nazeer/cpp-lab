@@ -3,7 +3,7 @@ class matrix{
     private:
     int rows;
     int columns;
-    int **m;
+    int ** m;
     public:
     matrix(int r,int c);
     void input();
@@ -13,7 +13,7 @@ class matrix{
 matrix::matrix(int r,int c){
     rows=r;
     columns=c;
-    int **m= new int *[rows];
+    m= new int *[rows];
     for(int i=0;i<rows;i++){
         m[i]=new int [columns];
     }
@@ -32,7 +32,7 @@ void matrix::display(){
         for(int j=0;j<columns;j++){
             std::cout<<m[i][j]<<" ";
         }
-        std::cout<<std::endl;
+        std::cout << std::endl;
     }
 }
 matrix::~matrix(){
@@ -53,3 +53,4 @@ int main(){
     ma.display();
     return 0;
 }
+
