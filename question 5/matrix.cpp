@@ -15,7 +15,7 @@ matrix::matrix(int r,int c){
     columns=c;
     m= new int *[rows];
     for(int i=0;i<rows;i++){
-        m[i]=new int [columns];
+        m[i]= new int [columns];
     }
     std::cout<<"dynamically allocated memory for 2d matrix with constructor"<<std::endl;
 }

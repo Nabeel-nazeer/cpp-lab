@@ -93,7 +93,7 @@ int customer::serial_no(){      //generating account no. for the customer
 }
 
 void menu()      //function displays menu
-{   std::cout<<"create an account to continue"<<std::endl;
+{   std::cout<<"_____________USER INTERFACE_____________"<<std::endl;
 	std::cout<<"press 1 to add a new account\n";
 	std::cout<<"press 2 to deposit cash\n";
 	std::cout<<"press 3 for balance enquiry\n";
