@@ -39,18 +39,18 @@ class compare{
     }
     compare(int s){
         size=s;
-        word= new std::string [size];
+        word= new std::string [size+1];
     }
     void getword(){
         std::cout<<"enter "<<size<<" words : "<<std::endl;
-        for (int i=0;i<size+1;i++){
+        for (int i=0;i<size;i++){
             std::cout<<"enter string no. "<<i+1<<" ; "<<std::endl;
             std::cin>>word[i];
         }
     }
     void comparison(){
         std::string largest= word[0];
-        for(int i=0;i<size+1;i++){
+        for(int i=0;i<size;i++){
             if(word[i].length()>largest.length()){
                 largest=word[i];
             }
